@@ -1,0 +1,24 @@
+/*
+APLICATION NAME: ELECTRONIC INSPECTION SYSTEM
+DESCTIPTION: SISTEMA ELECTRONICO DE INSPECCIONES DE CAJAS, PLATAFORMAS, PIPAS Y TRACTORES
+AUTHOR: BECERRA AVIÑA ISAAC ALI, MARTINEZ APARICIO JOSE LUIS, PADILLA GUTIERREZ ANA GABRIELA
+CREATED: DICIEMBRE, 2016
+ */
+body{
+	margin:0 auto !important;
+	padding-top: 40px;
+    background-color: #eee;
+	font-size: 15px !important;
+}
+
+#divTicket{
+	font-size: 20px !important;
+}
+
+.form-control{
+  font-size: 17px !important;
+  font-weight:bold !important;
+}
+button{
+	font-weight: bold !important;
+}

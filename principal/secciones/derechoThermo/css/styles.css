@@ -1,0 +1,99 @@
+/*
+APLICATION NAME: ELECTRONIC INSPECTION SYSTEM
+DESCTIPTION: SISTEMA ELECTRONICO DE INSPECCIONES DE CAJAS, PLATAFORMAS, PIPAS Y TRACTORES
+AUTHOR:  PADILLA GUTIERREZ ANA GABRIELA
+CREATED: DICIEMBRE, 2016
+ */
+body{
+	margin:0 auto !important;
+	padding-top: 10px;
+  background-color: #eee;
+  font-size: 15px !important;
+}
+
+
+
+/*.modal-dialog{
+  width: 90% !important;
+}*/
+
+
+input[type="file"] {
+ display: none !important;
+}
+
+
+/*.modal-body{
+  font-size: 10px !important;
+  color: cornflowerblue !important;
+	padding: 15px !important;
+}
+
+.modal-footer {
+  margin-top: -12px !important;
+}*/
+
+#barDiesel{
+  width: 100% !important;
+	-webkit-appearance: none;
+	background-color: silver;
+	height:20px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+     -webkit-appearance: none;
+    background-color: #666;
+    opacity: 0.5;
+    width: 20px;
+    height: 40px;
+}
+
+label.btn > input[type='radio']
+{
+    display: none !important;
+}
+
+.selMarca{
+ font-size: 20px !important;
+}
+
+.selDanio{
+ font-size: 20px !important;
+}
+
+.selRin{
+ font-size: 20px !important;
+}
+
+.tamanioTitulosllantas{
+  font-size: 16px !important;
+}
+
+
+.form-control{
+  font-size: 17px !important;
+  font-weight:bold !important;
+}
+
+button{
+  font-weight: bold !important;
+}
+
+.close{
+  font-size: 47px !important;
+}
+
+.botonesFoterModal {
+font-size: 20px !important;
+width: 196px !important;
+}
+
+
+.btn-default.active{
+ background-color: #FF0800 !important;
+}
+
+
+.btn-primary.active{
+ background-color: #FF0800 !important;
+}

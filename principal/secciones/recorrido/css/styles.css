@@ -1,0 +1,48 @@
+/*
+APLICATION NAME: ELECTRONIC INSPECTION SYSTEM
+DESCTIPTION: SISTEMA ELECTRONICO DE INSPECCIONES DE CAJAS, PLATAFORMAS, PIPAS Y TRACTORES
+AUTHOR:  PADILLA GUTIERREZ ANA GABRIELA
+CREATED: DICIEMBRE, 2016
+ */
+body{
+  background-color: #eee;
+}
+.header{
+	height: 100px;
+	margin-top: 55px;
+}
+.tamanioLogo{
+	height: 82px !important;
+}
+.borde{
+padding: 5px 14px;
+margin-bottom: 14px;
+background-color: #FFF;
+border: 1px solid #e1e1e8;
+border-radius: 11px;
+}
+.lbsColor{
+ color: blue !important;
+}
+.selLado{
+	font-size: 12px !important;
+	font-weight:bold !important;
+}
+.form-control{
+  font-size: 17px !important;
+  font-weight:bold !important;
+}
+button{
+  font-size: 17px !important;
+  font-weight:bold !important;
+}
+.modal-body{
+  font-size: 17px !important;
+}
+.botonesFoterModal {
+font-size: 20px !important;
+width: 196px !important;
+}
+.btn-default.active{
+ background-color: #90CAF9 !important;
+}

@@ -1,0 +1,21 @@
+/*
+APLICATION NAME: ELECTRONIC INSPECTION SYSTEM
+DESCTIPTION: SISTEMA ELECTRONICO DE INSPECCIONES DE CAJAS, PLATAFORMAS, PIPAS Y TRACTORES
+AUTHOR:  PADILLA GUTIERREZ ANA GABRIELA
+CREATED: DICIEMBRE, 2016
+ */
+.panel_datos{
+	font-weight: bold;
+	font-size: 1em !important;
+}
+.form-control{
+  font-weight:bold !important;
+	font-size: 1em !important;
+}
+.btn_options_types{
+	font-weight: bold;
+	font-size: 1em !important;
+}
+.btn_options_types.active{
+	background-color: #90CAF9 !important;
+}

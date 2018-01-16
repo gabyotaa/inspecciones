@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<!--
+APLICATION NAME: ELECTRONIC INSPECTION SYSTEM
+DESCTIPTION: SISTEMA ELECTRONICO DE INSPECCIONES DE CAJAS, PLATAFORMAS, PIPAS Y TRACTORES
+AUTHOR: BECERRA AVIÑA ISAAC ALI, MARTINEZ APARICIO JOSE LUIS, PADILLA GUTIERREZ ANA GABRIELA
+CREATED: DICIEMBRE, 2016
+-->
+<head>
+	<title>Inspection</title>
+	<meta name="application-name" content="Electronic Inspection System">
+  	<meta name="description" content="Sistema de Inspecciones a Cajas,Plataformas, Pipas y Tractores">
+  	<meta name="author" content="BECERRA AVIÑA ISAAC ALI, MARTINEZ APARICIO JOSE LUIS, PADILLA GUTIERREZ ANA GABRIELA ">
+  	<meta name="revised" content="DICIEMBRE, 2016">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<!--<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Expires" content="-1">-->
+	<meta http-equiv="Expires" content="0">
+  	<meta http-equiv="Last-Modified" content="0">
+  	<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  	<meta http-equiv="Pragma" content="no-cache">
+	<link href="../../css/font-awesome.css" rel="stylesheet">
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/pnotify.custom.min.css" rel="stylesheet">
+	<link href="../../css/sweetalert.css" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" href="../../../../img/faviconP.ico" type="image/icon">
+	<link href="../../css/app.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet">
+
+</head>
+<body>
+	<div id="wrapper"></div>
+	<div style="position: fixed; width: 100%;">
+		<div class="row">
+			<ul id="tabNavegacion" class="nav nav-tabs" style="height: 41px; margin-left: 75px;">
+				<li id="liFrente"  ><a href="#divFrente" data-lado='FRENTE'>FRONT</a></li>
+				<li id="liDerecha" ><a href="#divDerecha" data-lado='DERECHO'>LEFT</a></li>
+				<li id="liIzquieda"><a href="#divIzquierdo" data-lado='IZQUIERDO'>RIGHT</a></li>
+				<li id="liPuertas" ><a href="#divPuertas" data-lado='PUERTAS'>DOORS</a></li>
+				<li id="liOperador"><a href="#divOperador" data-lado='OPERADOR'>DRIVER</a></li>
+				<li id="liSuspension"><a href="#divSuspension" data-lado='SUSPENSION'>SUSPENSION</a></li>
+				<li id="liTractor" class='hidden'><a href="#divTractor" data-lado='TRACTOR'>TRUCK</a></li>
+				<li id="liTicket"  ><a href="#divTicket" data-lado='TICKET'>FINISH</a></li>
+			</ul>
+		</div>
+	</div> <!-- /container -->
+	<div class="container contenido">
+		<div class="col-xs-12" align="center">
+			<div class="tab-content">
+				<div class="tab-pane" id="divFrente" style="position: absolute; width: 100%;">
+					<iframe style="width: 100%;     min-height: 600px; " name="frameFrente" id="frameFrente" frameborder='0' src=""></iframe>
+				</div>
+				<div class="tab-pane" id="divDerecha" style="position: absolute; width: 100%;">
+					<iframe style="width: 100%;     min-height: 600px; " name="frameDerecha" id="frameDerecha" frameborder='0' src=""></iframe>
+				</div>
+				<div class="tab-pane" id="divIzquierdo" style="position: absolute; width: 100%;">
+					<iframe style="width: 100%;     min-height: 600px; "  name="frameIzquierdo" id="frameIzquierdo" frameborder='0' src=""></iframe>
+				</div>
+				<div class="tab-pane" id="divPuertas" style="position: absolute; width: 100%;">
+					<iframe style="width: 100%;     min-height: 600px; " name="framePuertas" id="framePuertas" frameborder='0' src=""></iframe>
+				</div>
+				<div class="tab-pane" id="divOperador" style="position: absolute; width: 100%;">
+					<iframe style="width: 100%;     min-height: 600px; " name="frameOperador" id="frameOperador" frameborder='0' src=""></iframe>
+				</div>
+				<div class="tab-pane" id="divSuspension" style="position: absolute; width: 100%;">
+					<iframe style="width: 100%;     min-height: 600px; "  name="frameSuspension" id="frameSuspension" frameborder='0' src=""></iframe>
+				</div>
+				<div class="tab-pane" id="divTractor" style="position: absolute; width: 100%;">
+					<iframe style="width: 100%;     min-height: 600px; " name="frameTractor" id="frameTractor" frameborder='0' src=""></iframe>
+				</div>
+				<div class="tab-pane" id="divTicket" style="position: absolute; width: 100%;">
+					<iframe style="width: 100%;     min-height: 600px; " name="frameTicket" id="frameTicket" frameborder='0' src=""></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!--FIN -->
+<script src="../../js/jquery-1.11.0.js"></script>
+<script src="../../js/printThis.js"></script>
+<script src="../../js/moment.min.js"></script>
+<script src="../../js/funcionesEstaticas.js"></script>
+<script src="js/main.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/pnotify.custom.min.js"></script>
+<script src="../../js/sweetalert.min.js"></script>
+<script src="../../js/bootstrap-datetimepicker.min.js"></script>
+<script src="../../js/bootstrap-datetimepicker.es.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#wrapper').load('../cabezera.html',function(){
+		$(padre).find('.menuRecorrido').removeClass('hidden'); // MOSTRAMOS LAS DEMÁS OPCIONES DEL MENÚ
+	});
+});
+</script>
+</body>
+</html>

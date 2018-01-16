@@ -1,0 +1,80 @@
+/*
+APLICATION NAME: ELECTRONIC INSPECTION SYSTEM
+DESCTIPTION: SISTEMA ELECTRONICO DE INSPECCIONES DE CAJAS, PLATAFORMAS, PIPAS Y TRACTORES
+AUTHOR:  PADILLA GUTIERREZ ANA GABRIELA
+CREATED: DICIEMBRE, 2016
+ */
+body{
+  padding-top: 40px;
+  background-color: #eee;
+  margin:0 auto !important;
+}
+
+
+
+.bordeRedondo{
+padding: 5px 14px;
+margin-bottom: 4px;
+background-color: #FFF;
+border: 1px solid #e1e1e8;
+border-radius: 11px;
+}
+
+.well-lg{
+padding: 30px !important;
+border-radius: 6px  !important;
+}
+
+@font-face {
+    font-family: alex-brush;
+    src: url(../../../../../fonts/AlexBrush-Regular.ttf);
+}
+@font-face {
+    font-family: antonio-bold;
+    src: url(../../../../../fonts/Antonio-Bold.ttf);
+}
+@font-face {
+    font-family: antonio-light;
+    src: url(../../../../../fonts/Antonio-Light.ttf);
+}
+@font-face {
+    font-family: antonio-regular;
+    src: url(../../../../../fonts/Antonio-Regular.ttf);
+}
+@font-face {
+    font-family: cac-champagne;
+    src: url(../../../../../fonts/cac_champagne.ttf);
+}
+@font-face {
+    font-family: carrington;
+    src: url(../../../../../fonts/Carrington.ttf);
+}
+@font-face {
+    font-family: sail-regular;
+    src: url(../../../../../fonts/Sail-Regular.otf);
+}
+@font-face {
+    font-family: sofia-regular;
+    src: url(../../../../../fonts/Sofia-Regular.otf);
+}
+@font-face {
+    font-family: archivo-black;
+    src: url(../../../../../fonts/ArchivoBlack.otf);
+}
+@font-face {
+    font-family: armwrestler;
+    src: url(../../../../../fonts/ArmWrestler.ttf);
+}
+@font-face {
+    font-family: goblinone;
+    src: url(../../../../../fonts/GoblinOne.otf);
+}
+
+.titulos{
+	font-family: archivo-black;
+	font-size:25px;
+}
+label{
+	font-family: archivo-black;
+	font-size:18px;
+}

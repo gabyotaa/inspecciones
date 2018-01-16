@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<!--
+APLICATION NAME: ELECTRONIC INSPECTION SYSTEM
+DESCTIPTION: SISTEMA ELECTRONICO DE INSPECCIONES DE CAJAS, PLATAFORMAS, PIPAS Y TRACTORES
+AUTHOR: BECERRA AVIÑA ISAAC ALI, MARTINEZ APARICIO JOSE LUIS, PADILLA GUTIERREZ ANA GABRIELA
+CREATED: DICIEMBRE, 2016
+-->
+<head>
+  <title>Information</title>
+  <meta name="application-name" content="Electronic Inspection System">
+  <meta name="description" content="Sistema de Inspecciones a Cajas,Plataformas, Pipas y Tractores">
+  <meta name="author" content="PADILLA GUTIERREZ ANA GABRIELA ">
+  <meta name="revised" content="DICIEMBRE, 2016">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <!--<meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Expires" content="-1">-->
+  <link href="../../css/font-awesome.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../../css/pnotify.custom.min.css" rel="stylesheet">
+  <link href="../../css/sweet-alert.css" rel="stylesheet">
+  <link href="../../css/app.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../../../../img/faviconP.ico" type="image/icon">
+</head>
+<body>
+  <div id="wrapper"></div>
+  <div class="container contenido">
+    <div class="row">
+      <div class="panel panel-primary panel_datos">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-sm-4">
+              <h3 class="panel-title">Trailer and Truck Information</h3>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-10">
+              <div class="row form-group">
+                <form id="frmBuscarCaja">
+                  <div class="input-group">
+                    <input type="text" id="txtCaja" class="form-control"  autofocus="autofocus" autocomplete="off" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="Trailer Number.." required>
+                    <span class="input-group-btn">
+                     
+                    <button  id="btnLimpiar" type="button" class="btn btn-default" aria-hidden="true">Reset</button>
+                  </span>
+                </div><!-- /input-group -->
+              </form>
+            </div>
+            <div class="segundaParte" style="display: none;">
+              <div class="row form-group">
+                <label class="col-xs-2 control-label" for="selLinea">Id:</label>
+                <div class="col-xs-10">
+                  <select id="selLinea" class="form-control"></select>
+                </div>
+              </div>
+              <div class="row form-group divTipoCaja">
+               
+                  <label class="col-xs-2 control-label">Trailer Type:</label>
+                  
+                   
+                    <div class="col-xs-4">
+                      <button type="button" id="btnPRIME" class="btn btn-block btn-default btn_options_types">REEFER</button>
+                    </div>
+                    
+                
+              </div>
+            </div>
+            <div class="terceraParte" style="display: none;">
+              <div class="row form-group">
+                <form id="frmBuscarTractor">
+                  <label for="txtNoTractor" class="col-sm-2 control-label tamanioLabel">Truck Number:</label>
+                  <div class="col-sm-4">
+                    <input type="number" class="form-control input-sm focus numeros limpiar" id="txtNoTractor" placeholder='Truck Number'>
+                  </div>
+                  <div id='divPlacaTractor'>
+                    <label for="txtPlacas" class="col-sm-2 control-label focus">License Plate Number:</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control input-sm limpiar" id="txtPlacas" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder='truck plate'>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="row form-group">
+                <label class="col-xs-2 control-label focus">Truck Carrier:</label>
+                <div class="col-xs-5">
+                  <select id="selTractorExterno" class="form-control focus"></select>
+                </div>
+                <div class="col-xs-5">
+                  <input type="text" class="form-control input-sm focus" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" id="txtTractorLinea" placeholder='Truck Carrier' >
+                </div>
+              </div>
+            </div>
+            <div class="row" align="center" id="divBotonesInter" style="display: none;">
+              <div class="col-xs-12">
+                <button type="button" id="btnCompleto" class="btn btn-success btn-lg btn-block">COMPLETE</button>
+                <button type="button" id="btnIncompleto" class="btn btn-danger btn-lg btn-block">INCOMPLETE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- /container -->
+<!-- ****************** SECCION DE MODALS **************** -->
+<div class="modal " id="mdlIncompleto" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fa fa-truck"></i> INSPECTION</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row" align="center">
+              <div class="row divCalendario" align="center">
+                <div class="col-xs-12">
+                  <div class='well'>
+                    <div class="form-group">
+                      <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' id="txtfechaIncompleto" class="form-control"  readonly/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-info divCalendario">
+              <p><h3><i class="fa fa-calendar"></i> Select date and time please...</h3></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default botonesFoterModal" data-dismiss="modal"><i class="fa fa-times"></i> Return</button>
+      <button type="button" class="btn btn-primary botonesFoterModal" id="btnIncContinuar" ><i id="iIncContinuar"></i> Continue</button>
+    </div>
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--******************  FIN  **************************** -->
+<!--FIN -->
+<script src="../../js/jquery-1.11.0.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/moment.min.js"></script>
+<script src="../../js/bootstrap-datetimepicker.min.js"></script>
+<script src="../../js/bootstrap-datetimepicker.es.js"></script>
+<script src="../../js/pnotify.custom.min.js"></script>
+<script src="../../js/sweetalert.min.js"></script>
+<script src="../../js/jquery.blockUI.js"></script>
+<script src="../../js/funcionesEstaticas.js"></script>
+<script src="../../js/app.js" type="text/javascript"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
